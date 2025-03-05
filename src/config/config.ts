@@ -18,7 +18,7 @@ export const MONGO_USER = process.env.MONGODB_USER || ''
 export const MONGO_PASSWORD = process.env.MONGO_PASSWORD || ''
 export const MONGO_URL = process.env.MONGO_URL || ''
 export const MONGO_DATABASE = process.env.MONGO_DATABASE || ''
-export const MONGO_OPTIONS: mongoose.ConnectionOptions = { w: 'majority' }
+// export const MONGO_OPTIONS: mongoose.ConnectionOptions = { w: 'majority' }
 /**
  * Lấy giá trị SERVER_HOSTNAME từ biến môi trường, nếu không có thì mặc định là "localhost"
  */
@@ -44,7 +44,6 @@ export const mongo = {
   MONGO_PASSWORD,
   MONGO_URL,
   MONGO_DATABASE,
-  MONGO_OPTIONS,
   // MONGO_CONNECTION: `mongodb+srv://${MONGO_USER}:${MONGO_PASSWORD}@${MONGO_URL}/${MONGO_DATABASE}`
   MONGO_CONNECTION: `mongodb+srv://chilinh28:chilinh28@cluster-project-job.b1zmq.mongodb.net/project_job?w=majority`
 }
