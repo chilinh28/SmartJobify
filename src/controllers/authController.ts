@@ -9,9 +9,9 @@ import { registerSchema } from '~/decorators/validate'
 import { sendEmail } from '~/utils/email'
 import fs from 'fs'
 import path from 'path'
-@Controller('/profile')
-class UserController {
-  @Route('post', '/candidate-profile')
+@Controller('/auth')
+class AuthController {
+  @Route('post', '/register')
   @Validate(registerSchema)
   async register(req: Request, res: Response, next: NextFunction) {
     try {
@@ -170,4 +170,4 @@ class UserController {
   }
 }
 
-export default UserController
+export default AuthController

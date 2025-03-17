@@ -14,7 +14,7 @@ import MainController from './controllers'
 import mongoose from 'mongoose'
 import { declareHandler } from './middlewares/declareHandler'
 import BooksController from './controllers/bookController'
-import AuthController from './controllers/userController'
+import AuthController from './controllers/authController'
 export const application = express() // Tạo ứng dụng Express
 
 // Tạo server HTTP từ Express

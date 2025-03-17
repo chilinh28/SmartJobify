@@ -11,7 +11,7 @@ export function Validate(schema: Joi.ObjectSchema) {
       } catch (error) {
         logging.error(String(error))
 
-        return res.status(422).json({ error: String(error.message) })
+        return res.status(422).json({ error })
       }
       return originalMethod.call(this, req, res, next)
     }
