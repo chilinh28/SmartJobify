@@ -1,8 +1,8 @@
 import { Request, Response, NextFunction } from 'express'
-import { logging } from '~/config/logging'
-import { Controller } from '~/decorators/controller'
-import { Route } from '~/decorators/route'
-import { Validate } from '~/decorators/validate'
+import { logging } from '../config/logging'
+import { Controller } from '../decorators/controller'
+import { Route } from '../decorators/route'
+import { Validate } from '../decorators/validate'
 import Joi from 'joi'
 
 const postHealthCheckValidation = Joi.object({

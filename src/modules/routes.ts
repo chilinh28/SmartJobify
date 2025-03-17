@@ -1,6 +1,6 @@
 import { Express, RequestHandler } from 'express'
 import { RouteHandler } from '../routes/index' // Import kiểu dữ liệu RouteHandler
-import { logging } from '~/config/logging'
+import { logging } from '../config/logging'
 
 /**
  * Hàm `defineRoutes` dùng để tự động đăng ký các routes từ danh sách controllers vào ứng dụng Express.

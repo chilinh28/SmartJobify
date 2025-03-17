@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express'
 import { Model } from 'mongoose'
-import { logging } from '~/config/logging'
+import { logging } from '../../config/logging'
 
 export function MongoGet(model: Model<any>) {
   return function (target: any, propertyKey: string, descriptor: PropertyDescriptor) {

@@ -1,12 +1,12 @@
 import { Request, Response, NextFunction } from 'express'
-import { logging } from '~/config/logging'
-import { Controller } from '~/decorators/controller'
-import { Route } from '~/decorators/route'
-import { Validate } from '~/decorators/validate'
-import { Book } from '~/models/book'
-import { MongoGetAll } from '~/decorators/mongoose/getAll'
-import { MongoGet } from '~/decorators/mongoose/get'
-import { MongoCreate } from '~/decorators/mongoose/create'
+import { logging } from '../config/logging'
+import { Controller } from '../decorators/controller'
+import { Route } from '../decorators/route'
+import { Validate } from '../decorators/validate'
+import { Book } from '../models/book'
+import { MongoGetAll } from '../decorators/mongoose/getAll'
+import { MongoGet } from '../decorators/mongoose/get'
+import { MongoCreate } from '../decorators/mongoose/create'
 @Controller('/books')
 class BooksController {
   @Route('get', '/all')

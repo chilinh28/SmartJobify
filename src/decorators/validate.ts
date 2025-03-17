@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express'
 import Joi from 'joi'
-import { logging } from '~/config/logging'
+import { logging } from '../config/logging'
 
 export function Validate(schema: Joi.ObjectSchema) {
   return function (target: any, propertKey: string, descriptor: PropertyDescriptor) {

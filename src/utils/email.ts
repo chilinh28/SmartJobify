@@ -1,6 +1,6 @@
 import sendMail from '@sendgrid/mail'
 import dotenv from 'dotenv'
-import { logging } from '~/config/logging'
+import { logging } from '../config/logging'
 
 dotenv.config()
 
