@@ -14,6 +14,7 @@ import MainController from './controllers'
 import mongoose from 'mongoose'
 import { declareHandler } from './middlewares/declareHandler'
 import BooksController from './controllers/bookController'
+import AuthController from './controllers/userController'
 export const application = express() // Tạo ứng dụng Express
 
 // Tạo server HTTP từ Express
@@ -51,7 +52,7 @@ export const Main = async () => {
 
   logging.info('🚀 Define controller Routing...')
   logging.info('----------------------')
-  defineRoutes([MainController, BooksController], application)
+  defineRoutes([AuthController], application)
   application.use(routeNotFound)
 
   // Khởi động server

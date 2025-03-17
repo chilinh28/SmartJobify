@@ -3,10 +3,11 @@ import mongoose, { Schema } from 'mongoose'
 // ====== User Schema ======
 const userSchema = new Schema(
   {
-    first_name: { type: String, required: true },
-    last_name: { type: String, required: true },
+    full_name: { type: String, required: true },
+    email: { type: String, required: true, unique: true },
     role: { type: String, enum: ['employer', 'candidate'], required: true },
-    password: { type: String, required: true }
+    password: { type: String, required: true },
+    refresh_token: { type: String, required: false }
   },
   { timestamps: true }
 )

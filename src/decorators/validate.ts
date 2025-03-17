@@ -11,10 +11,17 @@ export function Validate(schema: Joi.ObjectSchema) {
       } catch (error) {
         logging.error(String(error))
 
-        return res.status(422).json({ error })
+        return res.status(422).json({ error: String(error.message) })
       }
       return originalMethod.call(this, req, res, next)
     }
     return descriptor
   }
 }
+
+export const registerSchema = Joi.object({
+  full_name: Joi.string().required(),
+  email: Joi.string().email().required(),
+  role: Joi.string().valid('employer', 'candidate').required(),
+  password: Joi.string().min(6).required()
+})
